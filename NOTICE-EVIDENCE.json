@@ -1,0 +1,81 @@
+{
+  "files_sha256": {
+    "src/views/view-code.js": "53ce6a4796497c25c9b7fd63bd9614053daf285f0a67896bedfbda5d5efcc7da"
+  },
+  "limits": "No universal plagiarism search or legal ownership certification. Follow-history can end at file creation/copy and cannot establish upstream import version. Generated package metadata is not source provenance.",
+  "scope": "13 entry-source closures from packaging/ecosystem/ui.py (12 JavaScript Units + theme.the98); Host imports and sibling Project Units excluded. No code changes or wholesale relicensing.",
+  "source_commit": "ca48dbf190aa66e948a04d2f82a624295b7b6464",
+  "unit": {
+    "confidence": "moderate: Git attribution and closure scan; no affirmative proof every line is original",
+    "evidence": [
+      "Static import/asset closure, header/vendoring signal scan, git --follow and line-porcelain blame recorded in sources."
+    ],
+    "excluded_host_imports": [
+      {
+        "host_source": "cmd/app/src/core/runtime.js",
+        "import": "/core/runtime.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "d8b20203565414d011a72c7ffa31b55e7b94a6a7e41f46a4b05b042202b4ce84"
+      },
+      {
+        "host_source": "packages/util/view-plugin.js",
+        "import": "/util/view-plugin.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "d41f568dfdece1683d59d44f8f8d126bd2dcd55fad659c61eb0f84d430cb9081"
+      },
+      {
+        "host_source": "packages/widgets/code-editor.js",
+        "import": "/widgets/code-editor.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "80384616c66694000cebccaaf0bae638292addf2f0de1a967950058b3052847c"
+      }
+    ],
+    "findings": "No identifiable copied third-party header, npm import, vendored library, inline artwork, remote fetch or bundled font found in Unit closure. Git authorship is not proof of copyright ownership.",
+    "kind": "view",
+    "licenses": {
+      "gams_authored_code": "Apache-2.0 (owner decision; installation by parent generator pending)",
+      "third_party": []
+    },
+    "name": "view.code",
+    "notices": [],
+    "release_blockers": [],
+    "sources": [
+      {
+        "blame_authors": [
+          "Rom\u0101ns Pota\u0161ovs"
+        ],
+        "earliest_followed_change": {
+          "author": "Rom\u0101ns Pota\u0161ovs",
+          "authored_at": "2026-04-30T23:33:42+03:00",
+          "commit": "85681b6935658f8ad653cdbfea81ad2db3d539df",
+          "email": "justgook@gmail.com",
+          "subject": "\ud83d\udea7(browser:ng): better code edit"
+        },
+        "git_blob": "80a087cb206e50c36de78bd31b7a14e3b43ee655",
+        "history_authors": [
+          "Rom\u0101ns Pota\u0161ovs <justgook@gmail.com>"
+        ],
+        "history_count": 12,
+        "latest_change": {
+          "author": "Rom\u0101ns Pota\u0161ovs",
+          "authored_at": "2026-05-26T23:08:32+03:00",
+          "commit": "4dfb800cf593cb6c73d0aa12c9163973e25f7d86",
+          "email": "justgook@gmail.com",
+          "subject": "\ud83d\udc84(app): apply biome to all files"
+        },
+        "line_count": 223,
+        "path": "views/view-code.js",
+        "scan_signals": [],
+        "sha256": "53ce6a4796497c25c9b7fd63bd9614053daf285f0a67896bedfbda5d5efcc7da",
+        "source_url": "https://github.com/justgook/gamectl/blob/ca48dbf190aa66e948a04d2f82a624295b7b6464/views/view-code.js",
+        "static_imports": [
+          "/core/runtime.js",
+          "/util/view-plugin.js",
+          "/widgets/code-editor.js"
+        ],
+        "working_tree_matches_HEAD": true
+      }
+    ],
+    "upstream": []
+  }
+}
