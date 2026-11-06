@@ -1,2 +1,7 @@
 dist/
 __pycache__/
+
+# Documentation output, downloaded Host and Project dependency cache.
+build/
+tools/
+gams_modules/

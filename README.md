@@ -5,7 +5,7 @@ Initial prerelease extraction of the GAMS `view` Project Unit from
 ## Install mapping
 
 Prospective local candidate: `view.code-0.2.1.zip` and `SHA256SUMS` for
-`v0.2.1` (prepared, not yet published). After separately approved publication,
+`v0.2.1` (prepared, not yet published). After tag-triggered publication,
 download and verify the checksum. Unpack into a separate staging
 folder: copy its deployment files to the same Project-relative paths, and keep its
 LICENSE, NOTICE, README.md and unit.json under `notices/project-units/view.code/`.
@@ -49,7 +49,31 @@ dependency installs, and build outputs are outside the scan boundary.
 ## Release status
 
 GAMS-authored code is Apache-2.0. `package.json` remains private: distribution is a
-GitHub Release ZIP, never npm or OCI. Owner-reviewed LICENSE/NOTICE digest variables
-and release-branch/tag checks gate publication. Identified third-party terms are
+GitHub Release ZIP, never npm or OCI. A pushed matching version tag authorizes publication; source/evidence and artifact
+checks remain required, with no digest approval variables or required source branch. Identified third-party terms are
 retained in NOTICE, including 98.css MIT terms for the theme. See `LICENSING.md`
 and `PUBLISHING.md`.
+
+## Local commands
+
+Requires Node.js 24+, Python 3, Make, curl, tar and unzip. No npm install needed.
+
+```sh
+npm test
+make open                      # current local gams.json in tools/gams.app
+make serve-docs                 # http://localhost:8080; DOCS_PORT overrides
+make validate-docs
+make docs                       # portable wiki under build/site/
+```
+
+The View source loads directly from `src/`; no compilation is required.
+`make tools/gams.app` downloads the released macOS Apple Silicon Host only when
+absent, preserving its notices. `make open` explicitly sets `GAMS_APP_CWD` to
+this repository; no sibling checkout is required. Keep macOS security checks intact.
+Published dependencies are pinned in `gams.json` and cached under ignored
+`gams_modules/`. First launch needs network access.
+
+The wiki uses pinned justgook/wiki v1.4.0. GitHub Pages runs `make docs` on every
+push to `release`, independently of Unit tags. Enable **Settings → Pages → Source
+→ GitHub Actions**. `build-docs` remains an alias. Native GUI and hosted workflow
+execution are separate verification steps.
